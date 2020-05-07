@@ -1,6 +1,5 @@
 #include "fourrier.h"
 
-using namespace GiNaC;  // Для символьных вычислений
 
 int check_input(std::string input){
    std::string operations = "+-*/^()";
@@ -18,7 +17,7 @@ int check_input(std::string input){
                return 1;
 }
 
-std::string exp_input(symbol x){
+std::string exp_input(GiNaC::symbol x){
     std::cout << "Enter the function without space: f(x) = ";
     std::string input;
     std::cin >> input;
